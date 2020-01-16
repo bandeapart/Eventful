@@ -1,0 +1,37 @@
+package external;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class TicketMasterClient {
+	private static final String HOST = "https://app.ticketmaster.com";
+	private static final String PATH = "/discovery/v2/events.json";
+	private static final String DEFAULT_KEYWORD = "event";
+	private static final int DEFAULT_RADIUS = 50;
+	private static final String API_KEY = "K7MWrwcdoWoEcsA1CRTRlpHx6RBi9vqP";
+
+	public JSONArray search(double lat, double lon, String keyword) {
+		if (keyword == null) {
+			keyword = DEFAULT_KEYWORD;
+		}
+		
+		try {
+			keyword = URLEncoder.encode(keyword, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		String query = String.format("apikey=%s&latlong=%s,%s&keyword=%s&radius=%s", API_KEY, lat, long, keyword, DEFAULT_RADIUS);
+		
+	}
+}

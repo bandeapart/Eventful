@@ -1,0 +1,7 @@
+package rpc;
+
+public class RpcHelper {
+public static void writeJsonArray (HttpServeletResponse response, JSONArray array) throws IOException {
+	
+}
+}

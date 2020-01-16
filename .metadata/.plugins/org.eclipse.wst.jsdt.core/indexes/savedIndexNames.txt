@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/bandeapart/Desktop/ticketmaster/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2856400533.index
+3429604827.index
+2217868048.index
+3026521838.index
+258981881.index
+1048786177.index
